@@ -2,179 +2,305 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fahira Shoaib | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fahira Shoaib — Software Engineer</title>
+  <meta name="description"
+    content="Portfolio of Fahira Shoaib, software engineer specializing in full stack development, frontend systems, and secure-by-default applications.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="my-body">
-    <header class="my-header">
-        <a href="#hero" class="logo">FS</a>
-        <nav>
-            <ul class="my-list">
-                <li class="my-list-item"><a class="item-name" href="#hero">home</a></li>
-                <li class="my-list-item"><a class="item-name" href="#about">about</a></li>
-                <li class="my-list-item"><a class="item-name" href="#skills">skills</a></li>
-                <li class="my-list-item"><a class="item-name" href="#projects">work</a></li>
-                <li class="my-list-item"><a class="item-name" href="#contact">contact</a></li>
-            </ul>
-        </nav>
-        <!--<button id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></button>-->
-    </header>
+<body>
 
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <h1 class="hero-name">Fahira Shoaib</h1>
-            <p class="hero-text">Software Engineer.</p>
-            <a class="social-icons" href="https://github.com/fahirashoaib" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a class="social-icons" href="https://www.linkedin.com/in/fahira-shoaib-22194426b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a class="social-icons" href="https://www.instagram.com/fahira_shoaib/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+  <div class="noise-overlay"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="logo">[<span>FS</span>]</a>
+      <div class="nav-links">
+        <a href="#about" data-section="about"><span class="tag">01.</span>about</a>
+        <a href="#skills" data-section="skills"><span class="tag">02.</span>skills</a>
+        <a href="#work" data-section="work"><span class="tag">03.</span>work</a>
+        <a href="#contact" data-section="contact"><span class="tag">04.</span>contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="top" class="hero">
+    <div class="hero-inner">
+      <p class="prompt-line reveal-right" style="--delay:0s"><span class="prompt">visitor@portfolio</span><span
+          class="prompt-sep">:~$</span> whoami</p>
+      <h1 class="hero-name reveal-right" style="--delay:.1s">Fahira Shoaib<span class="cursor-blink">_</span></h1>
+      <p class="hero-role reveal-right" style="--delay:.2s">{ software engineer }</p>
+      <p class="hero-desc reveal-right" style="--delay:.3s">
+        I build fast, resilient web applications — from React interfaces
+        down to the APIs and infrastructure underneath. Currently focused
+        on developer tooling and secure-by-default systems.
+      </p>
+      <div class="hero-cta reveal-right" style="--delay:.4s">
+        <a href="#work" class="btn btn-primary">view_work()</a>
+        <a href="#contact" class="btn btn-ghost">get_in_touch()</a>
+      </div>
+    </div>
+    <div class="hero-code-block" aria-hidden="true">
+      <div class="code-window">
+        <div class="code-dots"><span></span><span></span><span></span></div>
+        <pre><code><span class="c-kw">const</span> <span class="c-var">developer</span> = {
+  <span class="c-key">name</span>: <span class="c-str">'Fahira Shoaib'</span>,
+  <span class="c-key">email</span>: <span class="c-str">'fahira.ash@gmail.com'</span>,
+  <span class="c-key">stack</span>: [<span class="c-str">'React'</span>, <span class="c-str">'Node'</span>, <span class="c-str">'Express'</span>, <span class="c-str">'MongoDB'</span>],
+  <span class="c-key">focus</span>: <span class="c-str">'secure systems'</span>,
+  <span class="c-key">available</span>: <span class="c-kw">true</span>,
+};</code></pre>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <h2 class="section-title reveal-right"><span class="bracket">[</span>01<span class="bracket">]</span> about</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Hi! My name is Fahira Shoaib, and I'm a Computer Science graduate, with hands-on experience designing,
+            developing, and securing full-stack software applications.
+          </p>
+          <p>
+            I have experience in building AI-powered applications, implementing scalable backend services, conducting
+            security assessments, and developing software solutions using Agile development practices. I am passionate
+            about solving complex engineering problems and building reliable, maintainable, and scalable software
+            systems. I can work independently or collaboratively in a team environment, and I am always eager to learn
+            new technologies and improve my skills.
+          </p>
+          <ul class="about-facts">
+            <li><span class="dim">location</span> — Onsite / Hybrid / Remote</li>
+            <li><span class="dim">focus</span> — Frontend systems, API design, Secure Systems</li>
+            <li><span class="dim">currently</span> — Learning &amp; building projects</li>
+          </ul>
         </div>
+        <div class="about-terminal">
+          <div class="code-window">
+            <div class="code-dots"><span></span><span></span><span></span></div>
+            <pre><code><span class="c-com">// experience.log</span>
+<span class="c-kw">2025 — 2026</span> Full Stack Developer for my Final Year Project
+<span class="c-kw">(June — Aug) 2023</span> Game Programming Apprenticeship at Mindstorms Studios
+<span class="c-com">// education.log</span>
+<span class="c-kw">B.S.</span> Computer Science <span class="c-kw">from</span> Information Technology University (ITU)
+<span class="c-kw">F.Sc.</span> Pre-engineering <span class="c-kw">from</span> Lahore College for Women University (LCWU)</code></pre>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="about" class="about">
-        <h2 class="section-title">About</h2>
-        <div class="about-content">
-            <p class="about-text">
-                Hi! My name is Fahira and I am a Software Engineer. I am currently pursuing a bachelor's degree in
-                Computer Science, increasing my knowledge and developing skills in the field. I started learning web
-                development through online courses and hands-on projects, enhancing my skills to move forward and trying
-                the latest technologies. I am always looking for new opportunities to apply and expand my knowledge.
-                Technologies I am familiar with:
-            </p>
-            <div class="about-skills">
-                <div><i class="fa-brands fa-html5"></i> HTML</div>
-                <div><i class="fa-brands fa-css"></i> CSS</div>
-                <div><i class="fa-solid fa-code"></i> C++</div>
-                <div><i class="fa-brands fa-python"></i> Python</div>
-                <div><i class="fa-brands fa-js"></i> JavaScript</div>
-                <div><i class="fa-solid fa-database"></i> SQL</div>
-            </div>
-            <div class="about-skills">
-                <div><i class="fa-brands fa-react"></i> React</div>
-                <div><i class="fa-solid fa-square-check"></i> Express</div>
-                <div><i class="fa-brands fa-node-js"></i> Node.js</div>
-                <div><i class="fa-solid fa-file-code"></i> TailwindCSS</div>
-                <div><i class="fa-solid fa-square-check"></i> Postman</div>
-            </div>
-            <div class="about-skills">
-                <div><i class="fa-solid fa-code-compare"></i> GitHub</div>
-                <div><i class="fa-solid fa-terminal"></i> VS Code</div>
-                <div><i class="fa-solid fa-database"></i> MongoDB</div>
-                <div><i class="fa-solid fa-square-check"></i> OOP</div>
-                <div><i class="fa-solid fa-square-check"></i> DSA</div>
-            </div>
-            <p class="about-text">
-                When I'm not working, you can find me learning a language on Duolingo, doing some drawing and sketching,
-                cooking, watching a movie or reading a book. I believe in continuous learning, staying inspired by the
-                world and spreading positivity around me.
-            </p>
-            <button class="btn" onclick="window.open('resources/resume-fahira.pdf', '_blank')">
-                <i class="fa-solid fa-file-pdf"></i> Resume
-            </button>
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section section-alt">
+      <h2 class="section-title reveal-right"><span class="bracket">[</span>02<span class="bracket">]</span> skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <p class="skill-cat">// frontend &amp; Backend</p>
+          <ul>
+            <li>React.js</li>
+            <li>Tailwind CSS</li>
+            <li>HTML &amp; CSS</li>
+            <li>Responsiveness</li>
+          </ul>
         </div>
+        <div class="skill-card">
+          <p class="skill-cat">// backend</p>
+          <ul>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>REST API</li>
+            <li>FastAPI</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <p class="skill-cat">// tooling</p>
+          <ul>
+            <li>Git &amp; GitHub</li>
+            <li>Postman</li>
+            <li>MongoDB</li>
+            <li>MySQL</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <p class="skill-cat">// technical languages</p>
+          <ul>
+            <li>C++</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <p class="skill-cat">// soft skills</p>
+          <ul>
+            <li>Communication</li>
+            <li>Teamwork</li>
+            <li>Problem Solving</li>
+            <li>Time Management</li>
+            <li>Adaptability</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <p class="skill-cat">// multilingual</p>
+          <ul>
+            <li>English</li>
+            <li>Urdu (Native)</li>
+            <li>Punjabi</li>
+            <li>Turkish (beginner)</li>
+            <li>Arabic (beginner)</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <p class="skill-cat">// hobbies</p>
+          <ul>
+            <li>book reading</li>
+            <li>drawing &amp; painting</li>
+            <li>travelling</li>
+            <li>cooking</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <p class="skill-cat">// currently learning</p>
+          <ul>
+            <li>Cybersecurity</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section id="skills" class="skills">
-        <h2 class="section-title">Skills</h2>
-        <div class="skill">
-            <h3 class="skill-heading">
-                <i class="fa-regular fa-square-caret-right"></i> Non-stop Learning
-            </h3>
-            <p class="skill-text">
-                Technology keeps evolving, so the ones who work with technology should also keep updating theirselves.
-            </p>
-        </div>
-        <div class="skill">
-            <h3 class="skill-heading">
-                <i class="fa-regular fa-square-caret-right"></i> Communicative
-            </h3>
-            <p class="skill-text">No matter your profession, communication is always a key.</p>
-        </div>
-        <div class="skill">
-            <h3 class="skill-heading">
-                <i class="fa-regular fa-square-caret-right"></i> Open-minded
-            </h3>
-            <p class="skill-text">
-                When you work for people or with people, you need to accept new ideas from their point of view and be
-                able to work on them.
-            </p>
-        </div>
+    <!-- ===== WORK ===== -->
+    <section id="work" class="section">
+      <h2 class="section-title reveal-right"><span class="bracket">[</span>03<span class="bracket">]</span> work</h2>
+      <div class="projects-grid">
+
+        <article class="project-card" data-title="SkillSprint (FYP)"
+          data-desc="A Duolingo-inspired web application that leverages LLMs to provide personalized skill-building exercises and feedback."
+          data-tech="MERN stack, FastAPI, Python, LLMs" data-github="https://github.com/fahirashoaib/SkillSprint1.1">
+          <div class="project-image">
+            <img src="assets/FYP.png" alt="SkillSprint (FYP) project screenshot">
+          </div>
+          <h3 class="project-name">SkillSprint (FYP)</h3>
+        </article>
+
+        <article class="project-card" data-title="Airline Policy Chatbot"
+          data-desc="A chatbot that provides users with information about specific airline's policies, including baggage allowances, check-in procedures, and other relevant details."
+          data-tech="Python, React, FastAPI, Vector DB, LLM" data-github="https://github.com/fahirashoaib/Airline-Policy-Chatbot">
+          <div class="project-image">
+            <img src="assets/chatbot.png" alt="Airline Policy Chatbot project screenshot">
+          </div>
+          <h3 class="project-name">Airline Policy Chatbot</h3>
+        </article>
+
+        <article class="project-card" data-title="Airbnb Clone"
+          data-desc="A clone of the popular Airbnb platform, built to practice frontend development and responsive design."
+          data-tech="MERN stack" data-github="https://github.com/fahirashoaib/AirBnbProject">
+          <div class="project-image">
+            <img src="assets/airbnb.png" alt="Airbnb Clone project screenshot">
+          </div>
+          <h3 class="project-name">Airbnb Clone</h3>
+        </article>
+
+        <article class="project-card" data-title="Solitaire Game"
+          data-desc="A classic Solitaire card game implemented as a console based application, showcasing interactive gameplay and state management."
+          data-tech="C++, Data Structures" data-github="https://github.com/fahirashoaib/Solitaire-Game">
+          <div class="project-image">
+            <img src="assets/solitaire.png" alt="Solitaire Game project screenshot">
+          </div>
+          <h3 class="project-name">Solitaire Game</h3>
+        </article>
+
+         <article class="project-card" data-title="Chess game"
+          data-desc="A classic chess game implemented as a console based application, showcasing interactive gameplay and piece movement logic."
+          data-tech="C++, Object-Oriented Programming" data-github="https://github.com/fahirashoaib/MyChess">
+          <div class="project-image">
+            <img src="assets/chess.png" alt="Chess game project screenshot">
+          </div>
+          <h3 class="project-name">Chess game</h3>
+        </article>
+
+        <article class="project-card" data-title="Compiler Construction"
+          data-desc="A C++ compiler designed in C++ in five phases: lexical analysis, syntax analysis, semantic analysis, intermediate code generation, and code optimization."
+          data-tech="C++" data-github="https://github.com/AbdulMoqeet87/_Custom_Compiler">
+          <div class="project-image">
+            <img src="assets/compiler.png" alt="Compiler Construction project screenshot">
+          </div>
+          <h3 class="project-name">Compiler Construction</h3>
+        </article>
+
+      </div>
     </section>
 
-    <section id="projects" class="work">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <img class="project-img" src="resources/image1.jpg" alt="Project 1">
-                <div class="project-info">
-                    <h3>Mern-Thinkboard</h3>
-                    <p>Your creative board to organize your notes, thoughts or ideas.</p>
-                    <a href="https://github.com/fahirashoaib/mern-thinkboard" class="btn" target="_blank">
-                        <i class="fa-solid fa-eye"></i> View
-                    </a>
-                </div>
-            </div>
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section section-alt contact-section">
+      <h2 class="section-title reveal-right"><span class="bracket">[</span>04<span class="bracket">]</span> contact</h2>
+      <div class="contact-inner">
+        <p class="prompt-line"><span class="prompt">alex@portfolio</span><span class="prompt-sep">:~$</span>
+          send_message</p>
+        <p class="contact-lede">Have a project in mind, a role to discuss, or
+          just want to say hi? My inbox is open.</p>
 
-            <div class="project">
-                <img class="project-img" src="resources/image2.jpg" alt="Project 2">
-                <div class="project-info">
-                    <h3>Airbnb</h3>
-                    <p>A simple version of airbnb website with listings, their details and bookings.</p>
-                    <a href="https://github.com/fahirashoaib/AirBnbProject" class="btn" target="_blank">
-                        <i class="fa-solid fa-eye"></i> View
-                    </a>
-                </div>
-            </div>
-
-            <div class="project">
-                <img class="project-img" src="resources/image3.jpg" alt="Project 3">
-                <div class="project-info">
-                    <h3>Practice Portfolio</h3>
-                    <p>A sample template for creating portfolio.</p>
-                    <a href="https://github.com/fahirashoaib/practice-portfolio-website" class="btn" target="_blank">
-                        <i class="fa-solid fa-eye"></i> View
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <section id="contact" class="contact">
-        <h2 class="section-title">Contact</h2>
-        <p class="contact-text">
-            I'd love to hear from you for any feedback or collaboration. Feel free to send me a
-            message!.
-        </p>
-
-        <form id="my-form" method="POST" action="https://formspree.io/f/myzpbjzz">
-            <div class="my-form">
-                <div class="form-block">
-                    <label class="form-label" for="name">Name</label>
-                    <input class="form-input" type="text" id="name" name="Name" placeholder="Name" required>
-                </div>
-                <div class="form-block">
-                    <label class="form-label" for="email">E-mail</label>
-                    <input class="form-input" type="email" id="email" name="Email" placeholder="e-mail" required>
-                </div>
-                <div class="form-block">
-                    <label class="form-label" for="message">Message</label>
-                    <textarea class="form-input" id="message" name="Message" rows="5" cols="23" placeholder="Message"
-                        required></textarea>
-                </div>
-                <button class="form-btn" type="submit">Send</button>
-            </div>
+        <form class="contact-form" id="contactForm" method="POST" action="https://formspree.io/f/myzpbjzz">
+          <label>
+            <span class="dim">name</span>
+            <input type="text" name="name" required placeholder="Your name">
+          </label>
+          <label>
+            <span class="dim">email</span>
+            <input type="email" name="email" required placeholder="you@example.com">
+          </label>
+          <label>
+            <span class="dim">message</span>
+            <textarea name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">send()</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
         </form>
+
+        <div class="social-row">
+          <a href="https://github.com/fahirashoaib" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/fahira-shoaib" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/fahira_shoaib/" target="_blank">Instagram</a>
+        </div>
+      </div>
     </section>
 
-    <footer class="my-footer">
-        <p>fahira_shoaib</p>
-    </footer>
-    <script src="main.js"></script>
+  </main>
+
+  <!-- ===== PROJECT MODAL ===== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <p class="dim modal-tech-label">Technologies:</p>
+      <ul class="tech-tags" id="modalTech"></ul>
+      <div class="modal-links">
+        <a id="modalGithub" href="#" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+        <!-- <a id="modalVisit" href="#" target="_blank" rel="noopener" class="btn btn-primary">Visit ↗</a> -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; fahira_shoaib</span></p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
